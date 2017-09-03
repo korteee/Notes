@@ -20,6 +20,8 @@
             width:3px;
             height:50%;
             background-color:$black;
+            top:50%;
+            transform:translate(0, -50%);
         }
     }
    
