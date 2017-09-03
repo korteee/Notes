@@ -4,6 +4,7 @@ This is a simple note taking application. This application is made for demonstra
 
 Steps to be taken to launch the application:
 
-1) Clone repository
-2) Run npm install in cloned repository directory
-3) Run npm start
+1) Install Node latest version
+2) Clone repository
+3) Run npm install in cloned repository directory
+4) Run npm start
