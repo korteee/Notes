@@ -1,16 +1,31 @@
 @import './_variables';
 
+/** Bootstrap Overrides **/
+
 button.btn,
 input.btn {
-    border-radius:0;
+    border-radius: 0;
 }
 
 button.btn.btn-link {
     color: $black;
 }
+
 button.btn.btn-link:hover,
 button.btn.btn-link:focus,
 button.btn.btn-link:active:focus {
     color: darken($black, 50%);
     outline: none;
+}
+
+
+/** Firefox Overrides **/
+
+:invalid {
+    box-shadow: none;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
 }
