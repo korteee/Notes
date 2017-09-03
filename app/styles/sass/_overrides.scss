@@ -1,0 +1,16 @@
+@import './_variables';
+
+button.btn,
+input.btn {
+    border-radius:0;
+}
+
+button.btn.btn-link {
+    color: $black;
+}
+button.btn.btn-link:hover,
+button.btn.btn-link:focus,
+button.btn.btn-link:active:focus {
+    color: darken($black, 50%);
+    outline: none;
+}

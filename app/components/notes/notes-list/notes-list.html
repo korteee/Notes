@@ -1,0 +1,1 @@
+<single-note on-note-change="$ctrl.onNoteChange()" on-note-remove="$ctrl.onNoteRemove({index:$index})" available-categories="$ctrl.availableCategories" class="note" ng-repeat="note in $ctrl.notes | ofActiveCategory:$ctrl.availableCategories track by $index" note="note"></single-note>

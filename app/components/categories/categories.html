@@ -1,0 +1,11 @@
+<div class="box box-white">
+    <div class="box__header">
+        <h4>Categories</h4>
+    </div>
+    <div class="box__body">
+        <categories-list on-toggle-category-status="$ctrl.toggleCategoryStatus(category)" on-category-remove="$ctrl.removeCategory(index)" categories="$ctrl.categories"></categories-list>
+    </div>
+    <div class="box__footer">
+        <new-category on-category-add="$ctrl.addCategory(category)" class="new-category"></new-category>
+    </div>
+</div>

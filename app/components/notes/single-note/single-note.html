@@ -1,0 +1,16 @@
+<div class="note__actions">
+    <button class="btn btn-link btn-md" ng-click="$ctrl.onNoteRemove()">
+        <span class="glyphicon glyphicon-trash"></span>
+    </button>
+</div>
+
+<div class="note__content">
+    <textarea textarea-resizer ng-change="$ctrl.onNoteChange()" ng-model-options="{ debounce: 500 }" ng-model="$ctrl.note.content">
+    </textarea>
+</div>
+
+<div class="note__category">
+    <select ng-change="$ctrl.onNoteChange()" ng-model-options="{ debounce: 500 }" ng-model="$ctrl.note.category" ng-options="category as category.title for category in $ctrl.availableCategories track by category.title">
+        <option value="">Leave category blank</option>
+    </select>
+</div>

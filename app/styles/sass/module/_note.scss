@@ -1,0 +1,47 @@
+@import './../_variables';
+@import './../_mixins';
+
+.note {
+    padding: 1em;
+    background-color: $white;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    float: left;
+    margin: 0.5em;
+    width:100%;
+
+    @include desktop {
+        width:auto;
+    }
+
+    &__content {
+        font-size: 200%;
+        textarea {
+            border: 0;
+            box-shadow: none;
+            border: none;
+            overflow: auto;
+            outline: none;
+            text-align: left;
+            resize: none;
+
+            width:100%;
+            
+                @include desktop {
+                    width:auto;
+                }
+        }
+    }
+    &__category {
+        float: right;
+        select {
+            border: none;
+            outline: none;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__actions {
+        float: right;
+    }
+}

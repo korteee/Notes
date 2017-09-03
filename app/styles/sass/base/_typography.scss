@@ -1,0 +1,52 @@
+@import "./../variables";
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url('./../../fonts/Roboto-Regular.ttf')
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url('./../../fonts/Roboto-Light.ttf')
+}
+
+body {
+    font-size: 14px;
+    font-family: $text-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $black;
+    letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $text-font
+}
+
+h1 {
+    font-size: 220%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+h3 {
+    font-size: 180%;
+}
+
+h4 {
+    font-size: 160%;
+}
+
+h5 {
+    font-size: 140%;
+}

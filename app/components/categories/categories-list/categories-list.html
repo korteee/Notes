@@ -1,0 +1,7 @@
+<div>
+    <single-category ng-click="$ctrl.toggleCategoryStatus(category)" on-category-remove="$ctrl.onCategoryRemove({index:$index})"
+        class="single-category" ng-class="{'single-category-active':category.isActive}" ng-repeat="category in $ctrl.categories track by $index"
+        category="category"></single-category>
+
+    <i ng-show="!$ctrl.categories.length">There are not any available categories.</i>
+</div>
