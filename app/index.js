@@ -29,4 +29,6 @@ ngModule.component('app', {
     bindings: {}
 });
 
+ngModule.constant('NOTES_COLORS', ['#fff', '#fb9a39', '#9afb53', '#eac2ca', '#90dcc0', '#ff82b2', '#eef04f'])
+
 document.addEventListener('DOMContentLoaded', () => angular.bootstrap(document, ['app']))

@@ -1,6 +1,7 @@
 class SingleNoteController {
-    constructor() {
+    constructor(NOTES_COLORS) {
         this.isOnEditCategory = false;
+        this.colors = NOTES_COLORS;
     }
 
 
@@ -14,6 +15,11 @@ class SingleNoteController {
         var o = event.target;
         o.style.height = "1px";
         o.style.height = (25 + o.scrollHeight) + "px";
+    }
+
+    pickColor(color) {
+        this.note.color = color;
+        this.onNoteChange();
     }
 
 

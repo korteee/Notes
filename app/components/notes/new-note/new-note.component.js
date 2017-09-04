@@ -1,5 +1,8 @@
 class NewNoteController {
-    constructor() {}
+    constructor(NOTES_COLORS) {
+        this.colors = NOTES_COLORS;
+        this.resetNote();
+    }
 
 
     $onInit() {}
@@ -12,7 +15,17 @@ class NewNoteController {
         this.onNoteAdd({
             note
         });
-        this.note = {};
+        this.resetNote();
+    }
+
+    pickColor(color) {
+        this.note.color = color;
+    }
+
+    resetNote() {
+        this.note = {
+            color: this.colors[0]
+        };
     }
 }
 export default {

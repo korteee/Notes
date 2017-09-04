@@ -1,4 +1,4 @@
-<div class="box box-white">
+<div class="box box-white" ng-style="{'background-color':$ctrl.note.color}">
 
     <div class="box__header">
         <h4>New Note</h4>
@@ -6,11 +6,15 @@
 
     <div class="box__body">
 
+
         <form name="NewNoteForm" class="form form-horizontal" ng-submit="$ctrl.addNote($ctrl.note)">
             <input ng-model="$ctrl.note.content" required class="form__input form-horizontal__input" type="text" placeholder="Don't forget to">
             <select ng-model="$ctrl.note.category" class="form__input form-horizontal__input" ng-options="category as category.title for category in $ctrl.availableCategories">
                 <option value="">Select Category</option>
             </select>
+
+            <color-picker class="color-picker" available-colors="$ctrl.colors" on-color-pick="$ctrl.pickColor(color)"></color-picker>
+
             <input class="form-horizontal__input btn btn-md btn-default" ng-disabled="NewNoteForm.$invalid" type="submit" value="Add">
         </form>
 

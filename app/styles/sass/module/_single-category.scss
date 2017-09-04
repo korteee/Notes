@@ -1,35 +1,40 @@
 @import './../_variables';
 @import './../_mixins';
-
 .single-category {
-    
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.5em;
-    position:relative;
-    
+    position: relative;
     &-active,
     &:hover {
         cursor: pointer;
         &:before {
-            content:'';
+            content: '';
             display: block;
             position: absolute;
-            left:0;
-            width:3px;
-            height:50%;
-            background-color:$black;
-            top:50%;
-            transform:translate(0, -50%);
+            left: 0;
+            width: 3px;
+            height: 50%;
+            top: 50%;
+            transform: translate(0, -50%);
         }
     }
-   
+    &-active {
+        &:before {
+            @include background-opacity($black, 0.5);
+        }
+    }
+    &:hover {
+        &:before {
+            background-color: $black;
+        }
+    }
     &__title {
         align-self: flex-start;
-        margin-left:0.5em;
+        margin-left: 0.5em;
     }
     &__button {
-        margin-left:auto;
+        margin-left: auto;
     }
 }

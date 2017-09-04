@@ -1,3 +1,5 @@
+<color-picker available-colors="$ctrl.colors" on-color-pick="$ctrl.pickColor(color)"></color-picker>
+
 <div class="note__actions">
     <button class="btn btn-link btn-md" ng-click="$ctrl.onNoteRemove()">
         <span class="glyphicon glyphicon-trash"></span>
@@ -5,12 +7,13 @@
 </div>
 
 <div class="note__content">
-    <textarea textarea-resizer ng-change="$ctrl.onNoteChange()" ng-model-options="{ debounce: 500 }" ng-model="$ctrl.note.content">
+    <textarea ng-style="{'background-color':$ctrl.note.color}" textarea-resizer ng-change="$ctrl.onNoteChange()" ng-model-options="{ debounce: 500 }" ng-model="$ctrl.note.content">
     </textarea>
 </div>
 
+
 <div class="note__category">
-    <select ng-change="$ctrl.onNoteChange()" ng-model-options="{ debounce: 500 }" ng-model="$ctrl.note.category" ng-options="category as category.title for category in $ctrl.availableCategories track by category.title">
+    <select ng-style="{'background-color':$ctrl.note.color}" ng-change="$ctrl.onNoteChange()" ng-model-options="{ debounce: 500 }" ng-model="$ctrl.note.category" ng-options="category as category.title for category in $ctrl.availableCategories track by category.title">
         <option value="">Leave category blank</option>
     </select>
 </div>

@@ -10,6 +10,8 @@ import newCategory from './categories/new-category/new-category.component';
 import categoriesList from './categories/categories-list/categories-list.component';
 import singleCategory from './categories/single-category/single-category.component';
 
+import colorPicker from './color-picker/color-picker.component';
+
 
 var components = angular.module('components', []);
 
@@ -21,7 +23,8 @@ components
     .component('categories', categories)
     .component('newCategory', newCategory)
     .component('categoriesList', categoriesList)
-    .component('singleCategory', singleCategory);
+    .component('singleCategory', singleCategory)
+    .component('colorPicker', colorPicker);
 
 
 export default components;

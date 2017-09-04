@@ -10,8 +10,7 @@ class ofActiveCategory {
             return notes.filter(note => !!activeCategories.find(ac => {
                 if (note.category)
                     return ac.title === note.category.title
-                return true;
-
+                return false;
             }));
         }
     }
