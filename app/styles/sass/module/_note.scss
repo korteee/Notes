@@ -8,6 +8,7 @@
     float: left;
     margin: 0.5em;
     width:100%;
+    position:relative;
 
     @include desktop {
         width:auto;
@@ -42,6 +43,8 @@
         }
     }
     &__actions {
-        float: right;
+        position: absolute;
+        top:1em;
+        right:1em;
     }
 }
